@@ -11,8 +11,8 @@ mvn test -q
 ```
 Which will run the appropriate test scripts.
 
-### A pretty picture
-
+A pretty picture
+```
 .
 ├── instructions.txt
 ├── LICENSE
@@ -47,3 +47,4 @@ Which will run the appropriate test scripts.
                         ├── stage_1.feature
                         └── stage_2.feature
 
+```
