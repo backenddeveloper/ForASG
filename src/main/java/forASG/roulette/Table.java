@@ -44,9 +44,16 @@ public class Table
         }
     }
 
-    public void record(Bet bet)
+    public void record(Bet bet) throws RouletteGameException
     {
-        bets.add(bet) ;
+        if(  pockets.contains(bet.pocket()) )
+        {
+            bets.add(bet) ;
+        }
+        else
+        {
+            throw new RouletteGameException() ;
+        }
     }
 
     public List<Pocket> pockets()

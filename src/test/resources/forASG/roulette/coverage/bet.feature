@@ -4,6 +4,4 @@ Feature: The bet
 Scenario: The customer can place a bet
     Given a customer
     When a bet of £1337 is placed on a mock pocket
-    Then a bet object of amount £1337 is returned
-
-
+    Then a bet object of amount £1337 relating to mock pocket is returned

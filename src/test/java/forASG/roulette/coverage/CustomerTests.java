@@ -21,14 +21,15 @@ public class CustomerTests
     }
 
     @When("^a bet of £(\\d+) is placed on a (.*) pocket$")
-    public void aBetIsPlaced(int amount , String name)
+    public void aBetIsPlaced(int amount , String name) throws Throwable
     {
         bet = customer.bet(amount , new Pocket(name)) ;
     }
 
-    @Then("^a bet object of amount £(\\d+) is returned$")
-    public void aBetIsReturned(int amount)
+    @Then("^a bet object of amount £(\\d+) relating to (.*) pocket is returned$")
+    public void aBetIsReturned(int amount , String name)
     {
         assertEquals(amount , bet.amount()) ;
+        assertEquals(name , bet.pocket().name()) ;
     }
 }

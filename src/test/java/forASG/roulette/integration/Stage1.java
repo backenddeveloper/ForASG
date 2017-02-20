@@ -3,21 +3,20 @@ package forASG.roulette.integration ;
 import cucumber.api.java.en.Given ;
 import cucumber.api.java.en.When ;
 import cucumber.api.java.en.Then ;
-import static org.mockito.Mockito.mock ;
-import static org.mockito.Mockito.when ;
-import forASG.roulette.Table ;
 import forASG.roulette.Customer ;
 import forASG.roulette.Pocket ;
+import forASG.roulette.Table ;
 import org.junit.Assert ;
 
 public class Stage1
 {
+
     private Table table ;
-    private Customer customer ;
     private Pocket pocket ;
+    private Customer customer ;
 
     @Given("^a customer places a bet of £(\\d+) on a pocket$")
-    public void a_customer_places_a_bet(int amount) throws Throwable
+    public void customerPlacesABet(int amount) throws Throwable
     {
         table = new Table() ;
         customer = new Customer() ;

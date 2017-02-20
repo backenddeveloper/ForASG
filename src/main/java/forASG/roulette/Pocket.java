@@ -3,8 +3,16 @@ package forASG.roulette ;
 public class Pocket
 {
 
-    public Pocket(String identifier)
+    private String name ;
+
+    public Pocket(String name)
     {
+        this.name = name ;
+    }
+
+    public String name()
+    {
+        return name ;
     }
 
 }
